@@ -1,0 +1,173 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.menu {
+    background-color: #3B1E54;
+    padding: 5px;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: width 0.6s, padding 0.6s;
+}
+
+/* Estado cerrado del menú */
+.menu.closed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: width 0.6s, padding 0.6s;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a, .menu li span {
+    display: flex;
+    align-items: center;
+    color: #EEEEEE;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    padding: 15px 20px;
+    gap: 10px;
+}
+
+.menu a i, .menu li span i {
+    flex-shrink: 0; /* Evitar que el icono se reduzca en tamaño */
+    font-size: 1.5rem;
+}
+
+.menu a:hover {
+    background-color: #eeeeeea4;
+}
+
+.menu ul ul {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #3B1E54;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu ul ul {
+    padding: 0; /* Sin padding para que coincida con el resto del menú */
+}
+
+.menu ul ul li {
+    width: 250px;
+}
+
+.menu ul ul a {
+    white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Alineación específica para iconos y texto */
+.menu a i, .menu li span i, .menu ul ul a i {
+    margin-right: 0;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    display: inline-flex; /* Para asegurar que se mantenga el tamaño */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos Responsivos */
+/* Para pantallas medianas y grandes */
+@media (max-width: 1024px) {
+    .menu {
+        width: 250px; /* Mantener el menú ancho en tabletas, pero más pequeño */
+    }
+
+    .menu li a, .menu li span {
+        padding: 12px 15px; /* Reducir un poco el padding */
+        font-size: 1.2rem; /* Reducir tamaño de texto */
+    }
+
+    .menu a i, .menu li span i {
+        font-size: 1.3rem; /* Reducir tamaño de los iconos */
+    }
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .menu {
+        width: 200px; /* Ajustar el ancho del menú para pantallas más pequeñas */
+    }
+
+    .menu li a, .menu li span {
+        padding: 10px 15px; /* Reducir el padding de los enlaces */
+        font-size: 1rem; /* Ajustar el tamaño de la fuente */
+    }
+
+    .menu a i, .menu li span i {
+        font-size: 1.2rem; /* Ajustar el tamaño de los iconos */
+    }
+}
+
+/* Para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .menu {
+        width: 100%; /* Hacer que el menú ocupe el ancho completo en pantallas muy pequeñas */
+        height: auto; /* Ajustar la altura */
+        top: 50px; /* Mantener la posición por debajo del header */
+    }
+
+    .menu ul {
+        display: block; /* Cambiar a display block para que el menú funcione mejor en móviles */
+    }
+
+    .menu li {
+        width: 100%; /* Asegurar que los elementos ocupen el ancho completo */
+    }
+
+    .menu a, .menu li span {
+        justify-content: center; /* Centrar el contenido */
+        padding: 10px 0; /* Ajustar el padding */
+    }
+
+    /* Estilos para los iconos */
+    .menu a i, .menu li span i {
+        font-size: 1.5rem; /* Ajustar el tamaño de los iconos en pantallas pequeñas */
+    }
+}
+
+/* Para dispositivos con orientación vertical (móviles en vertical) */
+@media (max-width: 375px) {
+    .menu {
+        width: 100%; /* Asegurarse de que el menú ocupe todo el ancho */
+        top: 60px; /* Mantener el menú en una posición adecuada */
+    }
+
+    .menu li {
+        width: 100%; /* Asegurar que cada ítem ocupe todo el ancho disponible */
+    }
+
+    .menu a, .menu li span {
+        padding: 10px 5px; /* Ajustar padding para pantallas más pequeñas */
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+
+    .menu a i, .menu li span i {
+        font-size: 1.2rem; /* Ajustar los iconos a un tamaño adecuado */
+    }
+}

@@ -1,0 +1,262 @@
+/* Estilos para la tabla */
+.table {
+    margin-top: 15px;
+    width: 90%;
+    max-width: 1350px;                
+    margin-left: auto;               
+    margin-right: auto;       
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de tabla */
+.header {
+    background-color: #9B7EBD;
+    color: #3B1E54;
+}
+
+.th, .td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #3B1E54;
+}
+
+/* Estilos de filas */
+.row {
+    transition: all 0.3s ease;
+}
+
+.row:hover {
+    background-color: #D4BEE4;
+    transform: scale(1.05);
+}
+
+/* Títulos */
+.title {
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #EEEEEE;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #3B1E54;
+    padding: 10px;
+}
+
+/* Select de país */
+.selectPais {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #3B1E54;
+    background-color: #EEEEEE;
+    color: #3B1E54;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.selectPais:focus {
+    outline: none;
+    border-color: #9B7EBD;
+}
+
+/* Barra de búsqueda */
+.barraBusqueda {
+    margin-bottom: 20px;
+}
+
+.inputBusqueda {
+    background-color: #EEEEEE;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #3B1E54;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de búsqueda */
+.searchContainer {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    background-color: #D5C9E0;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Texto de carga */
+.loadingText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Botón "Ver todas" */
+.verTodasButton {
+    background-color: #EEEEEE;
+    color: #341B54;
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+  
+.verTodasButton:hover {
+    background-color: #341B54;
+    color: #EEEEEE;
+    transform: scale(1.10);
+}
+
+/* Contenedor del cuerpo */
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* Estilo del footer */
+.footer {
+    margin-top: auto;
+    background-color: #3B1E54;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del párrafo dentro del footer */
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Media Queries para hacer el diseño más responsivo */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .table {
+        width: 100%;
+    }
+
+    .th, .td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .selectPais, .inputBusqueda {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .searchContainer {
+        margin-top: 50px;  /* Reduce el margen superior para móviles */
+        padding: 10px;
+    }
+
+    .verTodasButton {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 15px 0;
+    }
+}
+
+/* Para pantallas medianas (tabletas en orientación vertical) */
+@media (max-width: 768px) {
+    .table {
+        width: 95%;
+    }
+
+    .th, .td {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .title {
+        font-size: 22px;
+        padding: 9px;
+    }
+
+    .selectPais, .inputBusqueda {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .searchContainer {
+        margin-top: 60px;
+        padding: 12px;
+    }
+
+    .verTodasButton {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .footer {
+        font-size: 0.95rem;
+        padding: 18px 0;
+    }
+}
+
+/* Para pantallas grandes (escritorio y portátiles) */
+@media (max-width: 1024px) {
+    .table {
+        width: 100%;
+    }
+
+    .th, .td {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .selectPais, .inputBusqueda {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .searchContainer {
+        margin-top: 70px;
+        padding: 15px;
+    }
+
+    .verTodasButton {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+}

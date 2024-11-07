@@ -1,0 +1,221 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  margin-top: 0;
+  font-size: bold;
+}
+
+/* Contenedor de búsqueda */
+.searchContainer {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: #D5C9E0;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1235px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título dentro del contenedor de búsqueda */
+.searchContainer h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #EEEEEE;
+  background-color: #3B1E54;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+/* Estilo de los inputs dentro del contenedor de búsqueda */
+.searchContainer input {
+  background-color: #EEEEEE;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #3B1E54;
+  margin-top: 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+/* Estilo de los selects dentro del contenedor de búsqueda */
+.searchContainer select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #3B1E54;
+  background-color: #EEEEEE;
+  color: #3B1E54;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* Contenedor de tarjetas */
+.cardContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+  border: 1px solid #3B1E54;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: calc(90%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  color: #341B54;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #D5C9E0;
+}
+
+/* Título de las tarjetas */
+.card h3 {
+  margin: 0 0 5px;
+  color: #3B1E54;
+}
+
+/* Texto dentro de las tarjetas */
+.card p {
+  margin: 5px 0;
+}
+
+/* Enlace dentro de las tarjetas */
+.card a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #9C7CC2;
+}
+
+/* Estilo del botón "Buscar todas" */
+.buscartodas {
+  background-color: #EEEEEE;
+  color: #341B54;
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.buscartodas:hover {
+  background-color: #341B54;
+  color: #EEEEEE;
+  transform: scale(1.10);
+}
+
+/* Media Queries para hacer el diseño más responsivo */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  /* Contenedor de búsqueda */
+  .searchContainer {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .searchContainer h2 {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .searchContainer input,
+  .searchContainer select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Ajuste de tarjetas */
+  .card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  /* Estilo de los botones */
+  .buscartodas {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Para pantallas medianas (tabletas en orientación vertical) */
+@media (max-width: 768px) {
+  /* Contenedor de búsqueda */
+  .searchContainer {
+    margin-top: 60px;
+    padding: 12px;
+  }
+
+  .searchContainer h2 {
+    font-size: 20px;
+    padding: 9px;
+  }
+
+  .searchContainer input,
+  .searchContainer select {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  /* Ajuste de tarjetas */
+  .card {
+    width: calc(48%);
+    margin: 10px;
+    padding: 18px;
+  }
+
+  /* Estilo de los botones */
+  .buscartodas {
+    font-size: 15px;
+    padding: 9px;
+  }
+}
+
+/* Para pantallas grandes (escritorios y portátiles) */
+@media (max-width: 1024px) {
+  /* Contenedor de búsqueda */
+  .searchContainer {
+    margin-top: 70px;
+    padding: 15px;
+  }
+
+  .searchContainer h2 {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .searchContainer input,
+  .searchContainer select {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Ajuste de tarjetas */
+  .card {
+    width: calc(30%);
+    margin: 10px;
+    padding: 20px;
+  }
+
+  /* Estilo de los botones */
+  .buscartodas {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

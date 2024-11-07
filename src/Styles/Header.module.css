@@ -1,0 +1,92 @@
+/* Estilos del header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3B1E54;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1001;
+}
+
+/* Contenedor del título */
+.header .titleContainer {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Título */
+.header h1 {
+    color: #EEEEEE;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+    margin-left: -37px;
+}
+
+/* Botón de toggle */
+.toggleButton {
+    background: transparent;
+    border: none;
+    color: #EEEEEE; 
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Queries para hacerlo responsivo */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .header {
+        height: 50px; /* Reducir altura en pantallas móviles */
+        padding: 0 15px; /* Reducir el padding en pantallas móviles */
+    }
+
+    .header h1 {
+        font-size: 1.2rem; /* Reducir el tamaño de fuente del título */
+        margin-left: 0; /* Eliminar el margen negativo */
+    }
+
+    .toggleButton {
+        font-size: 1.2rem; /* Reducir el tamaño del botón */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .header {
+        height: 55px; /* Ajustar altura para tabletas */
+    }
+
+    .header h1 {
+        font-size: 1.3rem; /* Ajustar tamaño del título */
+    }
+
+    .toggleButton {
+        font-size: 1.3rem; /* Ajustar el tamaño del botón */
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .header {
+        height: 60px; /* Mantener altura original para pantallas grandes */
+        padding: 0 20px; /* Mantener el padding original */
+    }
+
+    .header h1 {
+        font-size: 1.5rem; /* Mantener el tamaño original del título */
+    }
+
+    .toggleButton {
+        font-size: 1.5rem; /* Mantener el tamaño original del botón */
+    }
+}
