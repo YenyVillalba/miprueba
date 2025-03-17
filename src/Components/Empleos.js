@@ -129,7 +129,7 @@ const Empleos = () => {
   return (
     <div className={styles.container}>
       <div className={styles.headerBox}>
-        <h2>FemPloy: Búsqueda de Empleo</h2>
+        <h2>FemPloy: Búsquedade Empleo</h2>
       </div>
 
       {showSuggestions && (
