@@ -9,11 +9,8 @@ import ConsultarAplicaciones from "./Components/ConsultarAplicaciones";
 import Empresas from "./Components/Empresas";
 import Login from "./Components/Login";
 import { NotificacionesProvider } from "./Components/NotificacionesContext";
-import RankingInternacional from "./Components/RankingInternacional";
-import RankingNacional from "./Components/RankinNacional";
-import HackatonesNacionales from "./Components/HackatonesNacionales";
+import HackatonesNacionales from "./Components/Eventos";
 import Registrarse from "./Components/Registrarse";
-import HackatonesInternacionales from "./Components/HackatonesInternacionales"
 
 
 
@@ -31,10 +28,7 @@ function App() {
           <Route path="/Cursos" element={<Cursos />} />
           <Route path="/ConsultarAplicaciones" element={<ConsultarAplicaciones />} />
           <Route path="/Empresas" element={<Empresas />} />
-          <Route path="/HackatonesInternacionales" element={<HackatonesInternacionales/>} />
-          <Route path="/HackatonesNacionales" element={<HackatonesNacionales />} />
-          <Route path="/RankingNacional" element={<RankingNacional />} />
-          <Route path="/RankingInternacional" element={<RankingInternacional />} />
+          <Route path="/Eventos" element={<HackatonesNacionales />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Registrarse" element={<Registrarse />} />
 

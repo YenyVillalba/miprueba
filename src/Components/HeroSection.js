@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section className={styles.hero}>
       <div className={styles.overlay}>
-        <h1>Empoderando a las Mujeres, Innovando el Mundo de la Tecnología</h1>
+        <h1>Empoderando a las Mujeres e Innovando el Mundo de la Tecnología</h1>
         <p>Bienestar, Equilibrio y Desarrollo Profesional</p>
         <Link to="/Empleos">
           <button className={styles.button}>Explorar Empleos</button>

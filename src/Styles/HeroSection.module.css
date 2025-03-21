@@ -1,17 +1,15 @@
 .hero {
-  margin-top: 60px;
-  background-image: url('../Assets/encabezado.jpg');
-  background-size: cover;
-  background-position: center;
+  margin-bottom: -40px; /* Ajusta el valor según necesites */
   color: white;
   position: relative;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .overlay {
-  background-color: rgba(59, 30, 84, 0.7);/* Fondo morado semi-transparente */
-  padding: 50px;
+  border-radius: 5px;
+  background-color: rgba(151, 113, 184, 0.7);/* Fondo morado semi-transparente */
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +20,7 @@
 
 .hero h1 {
   border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 24px;
     color: #EEEEEE;
     margin-bottom: 0;
@@ -34,14 +32,14 @@
 .hero p {
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 20px; /* Espacio abajo del párrafo */
+  margin-bottom: 10px; /* Espacio abajo del párrafo */
   max-width: 600px; /* Limitar el ancho máximo para el párrafo */
   margin-left: auto; 
   margin-right: auto; /* Centramos el párrafo */
 }
 
 .button {
-  background-color: #EEEEEE;
+    background-color: #EEEEEE;
     color: #341B54;
     margin-top: 0;
     padding: 10px;
