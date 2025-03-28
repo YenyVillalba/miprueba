@@ -1,7 +1,6 @@
 /* Estilos para Hero Section */
 .hero {
     margin-top: 60px;
-    background-image: url('../Assets/encabezado.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -174,6 +173,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 !important;
   }
   
   .footer p {
