@@ -8,15 +8,10 @@ import Notificaciones from "./Notificaciones";
 import { useNotificaciones } from './NotificacionesContext';
 
 const Menu = () => {
-    const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(true);
 
     // Usar el contexto para abrir y cerrar las notificaciones
     const { abrirNotificacion } = useNotificaciones(); // Obtenemos la función desde el contexto
-
-    const toggleSubMenu = () => {
-        setIsSubMenuOpen(!isSubMenuOpen);
-    };
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -51,26 +46,8 @@ const Menu = () => {
                     <li>
                         <Link to="/Empresas"><FontAwesomeIcon icon={faBuilding} /> Empresas</Link>
                     </li>
-                    <li onClick={toggleSubMenu}>
-                        <span>
-                            <FontAwesomeIcon icon={faCalendarAlt} /> Eventos
-                        </span>
-                        {isSubMenuOpen && (
-                            <ul>
-                            <li>
-                                <Link to="/HackatonesNacionales">Hackatones Nacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/HackatonesInternacionales">Hackatones Internacionales</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingNacional">Ranking Nacional</Link>
-                            </li>
-                            <li>
-                                <Link to="/RankingInternacional">Ranking Internacional</Link>
-                            </li>
-                        </ul>
-                        )}
+                    <li>
+                        <Link to="/Eventos"><FontAwesomeIcon icon={faCalendarAlt} /> Eventos</Link>
                     </li>
                     {/* Aquí hemos cambiado el comportamiento del <Link> para manejar el click sin navegación */}
                     <li>

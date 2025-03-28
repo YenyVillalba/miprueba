@@ -4,7 +4,6 @@ import styles from "../Styles/LogrosCarousel.module.css";
 import logro1 from "../Assets/logro1.jpg";
 import logro2 from "../Assets/logro2.jpg";
 import curso1 from "../Assets/curso1.jpg";
-import curso2 from "../Assets/curso2.jpg";
 
 function LogrosCarousel() {
   const settings = {
@@ -29,9 +28,6 @@ function LogrosCarousel() {
         </div>
         <div>
           <img src={curso1} alt="Curso 1" />
-        </div>
-        <div>
-          <img src={curso2} alt="Curso 2" />
         </div>
       </Slider>
     </div>
