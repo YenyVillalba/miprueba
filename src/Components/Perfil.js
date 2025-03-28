@@ -6,6 +6,7 @@ import empleoImagen from '../Assets/empleoNotificacion.jpg';
 import empleoImagen2 from '../Assets/EMPLEO2.jpg';
 import empleoImagen3 from '../Assets/EMPLEO3.jpg';
 import empleoImagen4 from '../Assets/EMPLEO4.jpg';
+import Footer from "../Components/Footer";
 
 const Perfil = () => {
 
@@ -343,22 +344,7 @@ const Perfil = () => {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerSection}>
-            <h4>Sobre FemPloy</h4>
-            <p>
-              Una plataforma creada para impulsar la empleabilidad de mujeres en tecnología. Accede a cursos, oportunidades y más.
-            </p>
-          </div>
-
-
-        </div>
-        <div className={styles.footerBottom}>
-          <p>&copy; 2024 Femploy. Todos los derechos reservados.</p>
-        </div>
-      </footer>
-
+      <Footer />
     </div>
   );
 };
