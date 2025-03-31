@@ -86,7 +86,7 @@
     margin-top: 80px;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 1250px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -125,40 +125,34 @@
     justify-content: space-between;
 }
 
-/* Estilo del footer */
-.footer {
-    margin-top: auto;
-    background-color: #3B1E54;
-    color: #EEEEEE;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilo del párrafo dentro del footer */
-.footer p {
-    margin: 0;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-}
-
-/* Media Queries para hacer el diseño más responsivo */
-
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .table {
         width: 100%;
+        display: block;
+        overflow-x: auto;
     }
 
     .th, .td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .searchContainer {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .selectPais, .inputBusqueda {
         font-size: 14px;
         padding: 8px;
+    }
+}
+
+/* Para pantallas menores a 480px (móviles pequeños) */
+@media (max-width: 480px) {
+    .th, .td {
+        font-size: 12px;
+        padding: 6px;
     }
 
     .title {
@@ -166,97 +160,13 @@
         padding: 8px;
     }
 
-    .selectPais, .inputBusqueda {
-        font-size: 14px;
+    .searchContainer {
+        margin-top: 40px;
         padding: 8px;
     }
 
-    .searchContainer {
-        margin-top: 50px;  /* Reduce el margen superior para móviles */
-        padding: 10px;
-    }
-
-    .verTodasButton {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .footer {
-        font-size: 0.9rem;
-        padding: 15px 0;
-    }
-}
-
-/* Para pantallas medianas (tabletas en orientación vertical) */
-@media (max-width: 768px) {
-    .table {
-        width: 95%;
-    }
-
-    .th, .td {
-        font-size: 15px;
-        padding: 9px;
-    }
-
-    .title {
-        font-size: 22px;
-        padding: 9px;
-    }
-
     .selectPais, .inputBusqueda {
-        font-size: 15px;
-        padding: 9px;
-    }
-
-    .searchContainer {
-        margin-top: 60px;
-        padding: 12px;
-    }
-
-    .verTodasButton {
-        font-size: 15px;
-        padding: 9px;
-    }
-
-    .footer {
-        font-size: 0.95rem;
-        padding: 18px 0;
-    }
-}
-
-/* Para pantallas grandes (escritorio y portátiles) */
-@media (max-width: 1024px) {
-    .table {
-        width: 100%;
-    }
-
-    .th, .td {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .title {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .selectPais, .inputBusqueda {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .searchContainer {
-        margin-top: 70px;
-        padding: 15px;
-    }
-
-    .verTodasButton {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .footer {
-        font-size: 1rem;
-        padding: 20px 0;
+        font-size: 12px;
+        padding: 6px;
     }
 }

@@ -2,7 +2,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 1px;
+  padding: 0;
   margin-top: 0;
   font-size: bold;
 }
@@ -16,7 +16,7 @@
   margin-top: 80px;
   margin-bottom: 20px;
   width: 100%;
-  max-width: 1235px;
+  max-width: 1175px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -119,19 +119,17 @@
   transform: scale(1.10);
 }
 
-/* Media Queries para hacer el diseño más responsivo */
-
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
+/* ---------------------------------------------- */
+/* Responsive */
+@media (max-width: 768px) {
   /* Contenedor de búsqueda */
   .searchContainer {
-    margin-top: 50px;
     padding: 10px;
+    margin-top: 50px;
   }
 
   .searchContainer h2 {
     font-size: 18px;
-    padding: 8px;
   }
 
   .searchContainer input,
@@ -140,82 +138,62 @@
     padding: 8px;
   }
 
-  /* Ajuste de tarjetas */
+  /* Contenedor de tarjetas */
+  .cardContainer {
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Hacer las tarjetas más grandes en pantallas pequeñas */
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .buscartodas {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Contenedor de búsqueda */
+  .searchContainer {
+    margin-top: 30px;
+    padding: 5px;
+  }
+
+  .searchContainer h2 {
+    font-size: 16px;
+  }
+
+  .searchContainer input,
+  .searchContainer select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  /* Contenedor de tarjetas */
+  .cardContainer {
+    flex-direction: column;
+  }
+
   .card {
     width: 100%;
     margin: 10px 0;
-    padding: 15px;
-  }
-
-  /* Estilo de los botones */
-  .buscartodas {
-    font-size: 14px;
-    padding: 8px;
-  }
-}
-
-/* Para pantallas medianas (tabletas en orientación vertical) */
-@media (max-width: 768px) {
-  /* Contenedor de búsqueda */
-  .searchContainer {
-    margin-top: 60px;
-    padding: 12px;
-  }
-
-  .searchContainer h2 {
-    font-size: 20px;
-    padding: 9px;
-  }
-
-  .searchContainer input,
-  .searchContainer select {
-    font-size: 15px;
-    padding: 9px;
-  }
-
-  /* Ajuste de tarjetas */
-  .card {
-    width: calc(48%);
-    margin: 10px;
-    padding: 18px;
-  }
-
-  /* Estilo de los botones */
-  .buscartodas {
-    font-size: 15px;
-    padding: 9px;
-  }
-}
-
-/* Para pantallas grandes (escritorios y portátiles) */
-@media (max-width: 1024px) {
-  /* Contenedor de búsqueda */
-  .searchContainer {
-    margin-top: 70px;
-    padding: 15px;
-  }
-
-  .searchContainer h2 {
-    font-size: 22px;
     padding: 10px;
   }
 
-  .searchContainer input,
-  .searchContainer select {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  /* Ajuste de tarjetas */
-  .card {
-    width: calc(30%);
-    margin: 10px;
-    padding: 20px;
-  }
-
-  /* Estilo de los botones */
   .buscartodas {
-    font-size: 16px;
-    padding: 10px;
+    padding: 6px;
+    font-size: 12px;
   }
 }
