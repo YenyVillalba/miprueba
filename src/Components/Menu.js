@@ -35,7 +35,7 @@ const Menu = () => {
                 {isMenuOpen && 
                 <ul>
                     <li>
-                        <Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link>
+                        <Link to="/Home"><FontAwesomeIcon icon={faHome} /> Home</Link>
                     </li>
                     <li>
                         <Link to="/Perfil"><FontAwesomeIcon icon={faUser} /> Perfil</Link>

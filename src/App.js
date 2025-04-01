@@ -10,28 +10,25 @@ import Empresas from "./Components/Empresas";
 import Login from "./Components/Login";
 import { NotificacionesProvider } from "./Components/NotificacionesContext";
 import HackatonesNacionales from "./Components/Eventos";
-import Registrarse from "./Components/Registrarse";
-
-
 
 function App() {
   const location = useLocation();
+
   return (
-    
     <NotificacionesProvider>
       <div>
-      {location.pathname !== '/Login' && location.pathname !== '/Registrarse' && <Menu />} {/* Menú de navegación que puede incluir enlaces */}  
+        {/* El menú solo se muestra si no estás en Login o Registrarse */}
+        {location.pathname !== "/" && location.pathname !== "/Registrarse" && <Menu />}
+
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Perfil" element={<Perfil />} />
           <Route path="/Empleos" element={<Empleos />} />
           <Route path="/Cursos" element={<Cursos />} />
           <Route path="/ConsultarAplicaciones" element={<ConsultarAplicaciones />} />
           <Route path="/Empresas" element={<Empresas />} />
           <Route path="/Eventos" element={<HackatonesNacionales />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Registrarse" element={<Registrarse />} />
-
         </Routes>
       </div>
     </NotificacionesProvider>

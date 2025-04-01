@@ -17,7 +17,7 @@ const Login = () => {
       setIsRegister(false); // Cambiar automáticamente a la vista de Login después del registro
     } else {
       // Simulamos el inicio de sesión y redirigimos al Home
-      navigate("/"); 
+      navigate("/Home"); 
     }
   };
 

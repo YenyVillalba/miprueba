@@ -2,9 +2,9 @@
 .table {
     margin-top: 15px;
     width: 90%;
-    max-width: 1350px;                
-    margin-left: auto;               
-    margin-right: auto;       
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
@@ -125,48 +125,115 @@
     justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+/* MEDIA QUERIES */
+
+/* Para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 767px) {
+    /* Estilos de la tabla */
     .table {
         width: 100%;
-        display: block;
-        overflow-x: auto;
+        margin-top: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .th, .td {
+        font-size: 14px;
         padding: 8px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    /* Estilos de la barra de búsqueda */
+    .inputBusqueda, .selectPais {
         font-size: 14px;
     }
 
+    /* Estilos del contenedor de búsqueda */
     .searchContainer {
         padding: 10px;
         margin-top: 50px;
     }
 
-    .selectPais, .inputBusqueda {
+    /* Botón "Ver todas" */
+    .verTodasButton {
         font-size: 14px;
         padding: 8px;
     }
 }
 
-/* Para pantallas menores a 480px (móviles pequeños) */
-@media (max-width: 480px) {
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos de la tabla */
+    .table {
+        width: 95%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .th, .td {
-        font-size: 12px;
-        padding: 6px;
+        font-size: 16px;
+        padding: 9px;
     }
 
     .title {
-        font-size: 20px;
-        padding: 8px;
+        font-size: 22px;
     }
 
+    /* Estilos de la barra de búsqueda */
+    .inputBusqueda, .selectPais {
+        font-size: 15px;
+    }
+
+    /* Estilos del contenedor de búsqueda */
     .searchContainer {
-        margin-top: 40px;
-        padding: 8px;
+        padding: 15px;
+        margin-top: 70px;
     }
 
-    .selectPais, .inputBusqueda {
-        font-size: 12px;
-        padding: 6px;
+    /* Botón "Ver todas" */
+    .verTodasButton {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    /* Estilos de la tabla */
+    .table {
+        width: 90%;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .th, .td {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    /* Estilos de la barra de búsqueda */
+    .inputBusqueda, .selectPais {
+        font-size: 16px;
+    }
+
+    /* Estilos del contenedor de búsqueda */
+    .searchContainer {
+        padding: 15px;
+        margin-top: 80px;
+    }
+
+    /* Botón "Ver todas" */
+    .verTodasButton {
+        font-size: 16px;
+        padding: 10px;
     }
 }

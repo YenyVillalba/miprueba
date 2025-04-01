@@ -119,81 +119,51 @@
   transform: scale(1.10);
 }
 
-/* ---------------------------------------------- */
-/* Responsive */
-@media (max-width: 768px) {
-  /* Contenedor de búsqueda */
+/* 🔹 🔹 🔹 🔹 RESPONSIVE 🔹 🔹 🔹 🔹 */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 900px) {
   .searchContainer {
-    padding: 10px;
-    margin-top: 50px;
-  }
-
-  .searchContainer h2 {
-    font-size: 18px;
-  }
-
-  .searchContainer input,
-  .searchContainer select {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  /* Contenedor de tarjetas */
-  .cardContainer {
-    justify-content: flex-start;
+    max-width: 90%; /* Reduce el ancho */
+    padding: 20px;
   }
 
   .card {
-    width: calc(100% - 20px); /* Hacer las tarjetas más grandes en pantallas pequeñas */
-    padding: 15px;
-    margin: 10px 0;
-  }
-
-  .card h3 {
-    font-size: 1.2rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  .buscartodas {
-    width: 100%;
-    font-size: 14px;
-    padding: 8px;
+    width: 45%; /* Reduce el ancho de las tarjetas */
   }
 }
 
-@media (max-width: 480px) {
-  /* Contenedor de búsqueda */
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
   .searchContainer {
-    margin-top: 30px;
-    padding: 5px;
+    margin-top: 40px;
+    padding: 15px;
+    max-width: 95%;
   }
 
   .searchContainer h2 {
-    font-size: 16px;
+    font-size: 18px; /* Reduce el tamaño del título */
+    padding: 8px;
   }
 
-  .searchContainer input,
+  .searchContainer input, 
   .searchContainer select {
-    font-size: 12px;
-    padding: 6px;
+    font-size: 14px;
+    padding: 8px;
   }
 
-  /* Contenedor de tarjetas */
   .cardContainer {
-    flex-direction: column;
+    flex-direction: column; /* Coloca las tarjetas en columna */
+    align-items: center;
   }
 
   .card {
-    width: 100%;
+    width: 90%; /* Hace las tarjetas más anchas */
     margin: 10px 0;
-    padding: 10px;
   }
 
   .buscartodas {
-    padding: 6px;
-    font-size: 12px;
+    font-size: 14px;
+    padding: 8px;
   }
 }
