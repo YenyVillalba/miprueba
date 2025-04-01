@@ -99,56 +99,69 @@
     transform: scale(1.10);
 }
 
-/* Media Queries para hacer el diseño más responsivo */
+/* Estilos Responsive */
 
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
+/* Para pantallas menores a 768px (tablets y móviles en horizontal) */
+@media (max-width: 768px) {
+    .contAiner {
+        padding: 10px;
+    }
+    
     .tittulo {
-        font-size: 20px; /* Reducir el tamaño del título en pantallas pequeñas */
-        padding: 8px;    /* Reducir el padding del título */
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .containerCard {
+        gap: 20px;
     }
 
     .ProfileCard {
-        width: 90%;      /* Hacer las tarjetas más pequeñas en pantallas pequeñas */
+        width: 90%;
+        max-width: 300px;
     }
 
     .ProfileName {
-        font-size: 20px; /* Reducir tamaño de fuente en las tarjetas */
+        font-size: 20px;
     }
 
     .ProfileDescription {
-        font-size: 12px; /* Reducir tamaño de texto en la descripción */
+        font-size: 13px;
     }
 
     .ProfileButton button {
-        font-size: 14px; /* Reducir el tamaño del texto del botón */
-        padding: 8px;    /* Reducir el padding del botón */
-    }
-
-    .footer {
-        padding: 15px 0; /* Reducir el padding del footer */
-        font-size: 0.9rem; /* Reducir el tamaño de fuente */
-    }
-
-    .footer p {
-        font-size: 0.9rem; /* Reducir tamaño de fuente del párrafo */
+        width: 80%;
     }
 }
 
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 768px) {
+/* Para pantallas menores a 480px (móviles en vertical) */
+@media (max-width: 480px) {
     .tittulo {
-        font-size: 22px; /* Reducir ligeramente el tamaño del título */
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .containerCard {
+        gap: 15px;
     }
 
     .ProfileCard {
-        width: 45%;      /* Ajustar las tarjetas para que ocupen menos espacio */
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
     }
-}
 
-/* Para pantallas grandes (escritorios y portátiles) */
-@media (min-width: 1024px) {
-    .ProfileCard {
-        width: 280px;    /* Mantener el tamaño de las tarjetas en pantallas grandes */
+    .ProfileName {
+        font-size: 18px;
+    }
+
+    .ProfileDescription {
+        font-size: 12px;
+    }
+
+    .ProfileButton button {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
     }
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faClipboardCheck, faHome, faUser, faBriefcase, faBuilding, faCalendarAlt, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import styles from "../Styles/Menu.module.css";
@@ -8,7 +8,13 @@ import Notificaciones from "./Notificaciones";
 import { useNotificaciones } from './NotificacionesContext';
 
 const Menu = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+
+    //Cerra el menú cuando se cambia de página
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location.pathname]);
 
     // Usar el contexto para abrir y cerrar las notificaciones
     const { abrirNotificacion } = useNotificaciones(); // Obtenemos la función desde el contexto
