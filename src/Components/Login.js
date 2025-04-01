@@ -31,7 +31,7 @@ const Login = () => {
     <div className={styles.container}>
       {/* Sección Izquierda */}
       <div className={styles.left}>
-        <h2 className={styles.title}>{isRegister ? "¡Únete a nosotros!" : "¡Bienvenido a FemPoy!"}</h2>
+        <h2 className={styles.title}>{isRegister ? "¡Únete a nosotros!" : "¡Bienvenido a FemPloy!"}</h2>
         <p className={styles.subtitle}>
           {isRegister ? "Crea una cuenta para empezar" : ""}
         </p>
