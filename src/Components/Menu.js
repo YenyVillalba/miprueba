@@ -62,7 +62,7 @@ const Menu = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Login"><FontAwesomeIcon icon={faSignOutAlt} /> Cerrar Sesión</Link>
+                        <Link to="/"><FontAwesomeIcon icon={faSignOutAlt} /> Cerrar Sesión</Link>
                     </li>
                 </ul>
                 }
